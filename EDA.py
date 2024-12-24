@@ -8,34 +8,9 @@ import seaborn as sns
 # Replace 'your_dataset.csv' with the name of your dataset file
 df = pd.read_csv('train.csv')
 
-# Display the first few rows of the dataset
-print("First 5 rows of the dataset:")
-print(df.head())
-
-# Display basic information about the dataset
-print("\nDataset Info:")
-print(df.info())
-
-# Display statistical summary of numerical columns
-print("\nStatistical Summary:")
-print(df.describe())
-
-# Check for missing values
-print("\nMissing Values in Each Column:")
-print(df.isnull().sum())
-
-# Check the shape of the dataset
-print("\nDataset Shape:")
-print(f"Rows: {df.shape[0]}, Columns: {df.shape[1]}")
-
 # Check the column names
 print("\nColumn Names:")
 print(df.columns)
-
-# Check for unique values in categorical columns
-print("\nUnique Values in Categorical Columns:")
-for col in df.select_dtypes(include='object').columns:
-    print(f"{col}: {df[col].unique()}")
 
 # Data distribution: Histograms
 print("\nVisualizing Data Distributions with Histograms:")
